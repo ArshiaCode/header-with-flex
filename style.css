@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav, .left-nav, .right-nav, .sing-in, .sing-up, .unset, .site-icon-section, .site-icon-image, .unset-section, header, .search-section, .search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    height: 70px;
+    background-color: whitesmoke;
+}
+.left-nav{
+    width: 80%;
+    justify-content: space-between;
+}
+.site-icon-section{
+    width: 10%;
+}
+.site-icon-image{
+    width: 50px;
+}
+.unset-section{
+    width: 90%;
+    justify-content: space-evenly;
+}
+.unset:hover{
+    background-color: #ddf0f1;
+}
+.right-nav{
+    width: 20%;
+    justify-content: space-evenly;
+}
+.sing-up, .sing-in{
+    width: 60px;
+}
+.sing-in{
+    background-color: #ddf0f1;
+    border-radius: 5px;
+}
+.sing-in:hover{
+    color: #676e72;
+}
+.sing-in:hover, .sing-up:hover, .unset:hover{
+    cursor: pointer;
+}
+header{
+    height: 100vh;
+    background-image: url("https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?t=st=1692436756~exp=1692437356~hmac=af685a3e3d25d75c54d1772b4a0833a649a62785b686601a86fe3b8f56cd218f");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: header-animation 10s 3s infinite alternate;
+    background-color: lightblue;
+    box-shadow: 0 0 5px gray;
+}
+.search-section{
+    min-width: 80px;
+    width: 400px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 40px gray;
+}
+#search{
+    box-sizing: content-box;
+    outline: 0;
+    border: 0;
+    border-bottom: 2px solid #c7c1c1;
+    border-radius: 10px;
+    width: 240px;
+    height: 25px;
+    line-height: 20;
+}
+@media  screen and (max-width: 600px){
+    .site-icon-section, .right-nav{
+        display: none;
+    }
+    nav{
+        height: auto;
+    }
+    .left-nav{
+        width: 100%;
+    }
+    .unset-section{
+        flex-direction: column;
+        width: 100%;
+    }
+    .unset{
+        border-bottom: 1px solid lightgray;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .search-box span{
+        display: none;
+    }
+    #search{
+        width: auto;
+    }
+}
+@keyframes header-animation{
+    25%{
+        background-image: url("https://img.freepik.com/free-photo/beautiful-aerial-shot-blue-river-running-forest_181624-1548.jpg?t=st=1692438490~exp=1692439090~hmac=d989edaf4fe77539f66805b9fb8e3455779280b0add5e12038398df9e3e80a4b");
+    }
+    50%{
+        background-image: url("https://img.freepik.com/free-photo/lake-mountains_1204-508.jpg?t=st=1692438490~exp=1692439090~hmac=a8acd479c842a139bda01fc8718ccb9225f45c39e61e3da95134145dbf40f3bc");
+    }
+    75%{
+        background-image: url("https://img.freepik.com/free-photo/river-surrounded-by-forests-cloudy-sky-thuringia-germany_181624-30863.jpg?t=st=1692438490~exp=1692439090~hmac=f8346d52bcfb3bcfa49e67b69815a5d29644f350917d26964b9ebd7df3e401b0");
+    }
+    100%{
+        background-image: url("https://img.freepik.com/free-photo/birch-forest-sunny-afternoon-while-autumn-season_146671-19510.jpg?t=st=1692438559~exp=1692439159~hmac=52011fca7d2f7ce51e390a12892a31afbe50b1a84f4ffbe24cdcfd2bff34ae4d");
+    }
+}
